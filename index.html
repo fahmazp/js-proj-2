@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <title>Sum of Two Numbers</title>
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            background-color: #131314;
+            color: #fff;
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+
+        input {
+            border-radius: 3px !important;
+            color: #000 !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="text-align: center;margin-top: 50px;">
+        <h2>Enter Two Numbers</h2>
+        <input type="text" id="num1" placeholder="Enter first number" required>
+        <input type="text" id="num2" placeholder="Enter second number" required>
+        <button
+            class="relative inline-flex items-center justify-center
+             p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
+            text-gray-900 rounded-full group bg-gradient-to-br from-purple-600
+            to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500
+            hover:text-white dark:text-white focus:ring-4 focus:outline-none
+            focus:ring-blue-300 dark:focus:ring-blue-800" type="submit" onclick="Sum()">
+            <span
+                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0">
+                Add Numbers
+            </span>
+        </button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function Sum() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            // Convert to numbers by adding 0
+            let sum = (num1 * 1) + (num2 * 1);
+
+            document.getElementById("result").innerText = "Sum is : " + sum;
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+</body>
+
+</html>
